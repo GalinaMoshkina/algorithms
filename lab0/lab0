@@ -1,1 +1,23 @@
+def func1(a, b):
+    if -(10 ** 9) <= a <= (10 ** 9) and -(10 ** 9) <= b <= (10 ** 9):
+        return a + b
+    return None
 
+
+def func2(a, b):
+    if -(10 ** 9) <= a <= (10 ** 9) and -(10 ** 9) <= b <= (10 ** 9):
+        return a + (b ** 2)
+    return None
+
+
+def func3():
+    with open("input.txt", "r") as file:
+        ab = [int(x) for x in file.read().split()]
+        if -(10 ** 9) <= ab[0] <= (10 ** 9) and -(10 ** 9) <= ab[1] <= (10 ** 9):
+            return ab[0] + ab[1]
+        return None
+
+
+print(func1(int(input()), int(input())))
+
+print(func2(int(input()), int(input())))
